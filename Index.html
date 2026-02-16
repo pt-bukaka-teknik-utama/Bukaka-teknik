@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -13,55 +12,69 @@ body {
     margin: 0;
 }
 
+/* ================= HEADER ================= */
+
 .header {
     background: linear-gradient(90deg, #1f3c88, #3a6fd8);
     color: white;
-    padding: 25px 20px 30px 20px;
-    text-align: center;
-    position: relative;
+    padding: 35px 20px;
 }
 
-.header img.logo-komdigi {
-    position: absolute;
-    left: 20px;
-    top: 20px;
-    height: 55px;
+.header-inner {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo-komdigi {
+    height: 75px;
+}
+
+.header-text {
+    flex: 1;
+    text-align: center;
 }
 
 .kementerian-text {
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 17px;
+    font-weight: 700;
     letter-spacing: 0.5px;
 }
 
 .sub-kementerian {
-    font-size: 12px;
-    font-weight: 500;
-    margin-top: 2px;
+    font-size: 13px;
+    margin-top: 6px;
+    line-height: 1.5;
 }
 
 .title-main {
-    margin-top: 18px;
-    font-size: 20px;
+    margin-top: 22px;
+    font-size: 24px;
     font-weight: bold;
+    letter-spacing: 1px;
 }
 
+/* ================= CONTENT ================= */
+
 .container {
-    max-width: 650px;
-    margin: 30px auto;
+    max-width: 750px;
+    margin: 40px auto;
     background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
     position: relative;
     overflow: hidden;
 }
 
+/* Watermark Kominfo */
 .container::before {
     content: "";
     background: url('logo-kominfo.PNG') no-repeat center;
-    background-size: 300px;
-    opacity: 0.06;
+    background-size: 380px;
+    opacity: 0.05;
     position: absolute;
     top: 0;
     left: 0;
@@ -72,17 +85,18 @@ body {
 .status {
     background: #d4edda;
     color: #155724;
-    padding: 12px;
+    padding: 14px;
     text-align: center;
-    border-radius: 6px;
+    border-radius: 8px;
     font-weight: bold;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     position: relative;
     z-index: 1;
+    font-size: 18px;
 }
 
 .field {
-    margin-bottom: 14px;
+    margin-bottom: 18px;
     position: relative;
     z-index: 1;
 }
@@ -90,13 +104,14 @@ body {
 .label {
     font-weight: bold;
     color: #1f3c88;
+    font-size: 17px;
 }
 
 .footer {
     text-align: center;
-    font-size: 12px;
-    margin-top: 25px;
-    color: #666;
+    font-size: 13px;
+    margin-top: 35px;
+    color: #777;
     position: relative;
     z-index: 1;
 }
@@ -105,38 +120,55 @@ body {
 
 <body>
 
-<div class="header">
-    <img src="logo-komdigi.PNG" class="logo-komdigi" alt="Logo Komdigi">
-    
-    <div class="kementerian-text">
-        KEMENTERIAN KOMUNIKASI DAN INFORMATIKA RI
-    </div>
-    <div class="sub-kementerian">
-        DIREKTORAT JENDERAL INFRASTRUKTUR DIGITAL<br>
-        DIREKTORAT LAYANAN INFRASTRUKTUR DIGITAL
-    </div>
+<!-- ================= HEADER ================= -->
 
-    <div class="title-main">
-        VALIDASI LICENSE ISR
+<div class="header">
+    <div class="header-inner">
+        <img src="logo-komdigi.PNG" class="logo-komdigi" alt="Logo Komdigi">
+
+        <div class="header-text">
+            <div class="kementerian-text">
+                KEMENTERIAN KOMUNIKASI DAN INFORMATIKA RI
+            </div>
+
+            <div class="sub-kementerian">
+                DIREKTORAT JENDERAL INFRASTRUKTUR DIGITAL<br>
+                DIREKTORAT LAYANAN INFRASTRUKTUR DIGITAL
+            </div>
+
+            <div class="title-main">
+                VALIDASI LICENSE ISR
+            </div>
+        </div>
     </div>
 </div>
+
+<!-- ================= CONTENT ================= -->
 
 <div class="container">
 
 <div class="status">STATUS: AKTIF (Granted)</div>
 
-<div class="field"><span class="label">Nomor ISR:</span><br>06845427-000SU/2220262031</div>
+<div class="field"><span class="label">Nomor ISR:</span><br>
+06845427-000SU/2220262031
+</div>
 
-<div class="field"><span class="label">No Sertifikat:</span><br>SDPPI-92573/SDPPI/2023 (PLG ID 1758)</div>
+<div class="field"><span class="label">No Sertifikat:</span><br>
+SDPPI-92573/SDPPI/2023 (PLG ID 1758)
+</div>
 
-<div class="field"><span class="label">Perusahaan:</span><br>PT Bukaka Teknik Utama Tbk</div>
+<div class="field"><span class="label">Perusahaan:</span><br>
+PT Bukaka Teknik Utama Tbk
+</div>
 
 <div class="field"><span class="label">Alamat:</span><br>
 Raya Narogong–Bekasi KM 19.5,<br>
 Limununggal Cileungsi – Bogor, Jawa Barat
 </div>
 
-<div class="field"><span class="label">Lokasi:</span><br>Bogor</div>
+<div class="field"><span class="label">Lokasi:</span><br>
+Bogor
+</div>
 
 <div class="field"><span class="label">Titik Koordinat:</span><br>
 1°40'39.21" LU<br>
